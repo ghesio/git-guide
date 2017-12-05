@@ -132,6 +132,10 @@ You can create a new tag named 1.0.0 by executing
 the *1b2e1d63ff* stands for the first 10 characters of the commit id you want to reference with your tag. You can use anything you want as tag ID.   
 You can get the commit ID by looking at the **git log**
 
+To push your tags
+
+`git push origin <branch> --tags`
+
 ## Git log
 
 In its simplest form, you can study repository history using `git log`
