@@ -46,6 +46,11 @@ This is the first step in the basic git workflow. To actually commit these chang
 
 Now the file is committed to the **HEAD**, but not in your remote repository yet.
 
+## .gitignore
+
+The *.gitignore* file let you exclude some files or directories from the *working tree*.  
+Simply write in this files their paths.
+
 ## Pushing changes
 
 Your changes are now in the **HEAD** of your local working copy.
