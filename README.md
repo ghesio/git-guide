@@ -46,6 +46,11 @@ This is the first step in the basic git workflow. To actually commit these chang
 
 Now the file is committed to the **HEAD**, but not in your remote repository yet.
 
+## Unstaging changes & removing file from repo
+
+To unstage file edits, use `git reset <file>`.  
+By using `git rm --cached <file>` you stage the removal of the file from the repository, meaning that on next push `<file>` will be deleted from the *Index*.
+
 ## .gitignore
 
 The *.gitignore* file let you exclude some files or directories from the *working tree*.  
