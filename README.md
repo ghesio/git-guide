@@ -168,6 +168,48 @@ See only which files have changed:
 
 `git log --name-status`
 
+## Rebase
+
+Git rebase is another way to manages conflicts/branches without merging.
+
+Rebasing a branch means detaching and attaching again a branch to a new commit.
+
+Let's say you have a `master` branch and a `feature_1` branch, in this situation:
+
+```
+A-B-C  (master)
+ \
+  D-E-F-G-H-I  (feature_1)
+```
+
+If you checkout with `git checkout feature_1` and do a `git rebase -i master` you will get this
+
+```
+A-B-C  (master)
+     \
+      D-E-F-G-H-I  (feature_1)
+```
+
+effectively adding the modification made in commits `B` and `C` to the branch `feature_1`
+
+## Squashing
+
+Squashing is the collapsing of more commits in one.
+
+To collapse the last `X` commits in 1:
+
+```
+git reset --soft HEAD~X
+git add .
+git commit -m "Combined X commits message"
+```
+
+Care with pushing this: if you had already pushed your commits before you need to do a force push (that rewrites all the history in git tree, very dangerous to do, especially if you work in team).
+
+`git push origin +<branch_name>`
+
+(the plus sign indicates that you are force pushing)
+
 ## Reverting and discarding changes
 
 To discard current changes
